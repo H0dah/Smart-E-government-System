@@ -31,21 +31,42 @@ class Idcard(models.Model):
     )
 
   
+    national_id = models.BigIntegerField(default= 123456789, help_text='Enter National ID', primary_key=True)
     first_name = models.CharField(max_length=15, help_text='Enter First Name')
     father_name = models.CharField(max_length=100, help_text='Enter Father Complete Name')
     mother_name = models.CharField(max_length=100, help_text='Enter Mother Name')
-    religion = models.CharField(max_length=1, choices=religion_options)
+    religion = models.CharField(max_length=30, choices=religion_options)
     gender = models.CharField(max_length=1, choices=gender_type)
     social_status = models.CharField(max_length=50, choices=social_status_options)
-    governorate = models.CharField(max_length=15)
-    department = models.CharField(max_length=30)
-    village = models.CharField(max_length=30)
+    governorate = models.CharField(max_length=15, default='mansoura')
+    department = models.CharField(max_length=30, default='45')
+    village = models.CharField(max_length=30, default='45')
+    building_number = models.IntegerField(default=1)
+    street = models.CharField(max_length=30, default='45')
+    floor_number = models.IntegerField(default=1)
+    aprtment = models.IntegerField(default=1) #الشقة
+    phone_number = models.IntegerField(default=10022334455, help_text='Enter Phone Number')
+    residential_pool = models.CharField(max_length=30, default='45')
+    #photograph = models.ImageField(upload_to='media')
 
     def __str__(self):
         return self.first_name
 
+class Driving_license(models.Model):
 
-""" class Profile(models.Model):
+    traffic_police_area = models.CharField(max_length=30)
+    quadruple_name = models.CharField(max_length=100)
+    national_id = models.BigIntegerField(help_text='Enter National ID', primary_key=True)
+    phone_number = models.IntegerField(help_text='Enter Phone Number')
+    address = models.CharField(max_length=100, help_text='Enter address')
+    date_of_birth = models.DateField(help_text='Enter Date of Birth')
+
+    def __str__(self):
+        return self.national_id
+
+
+
+class Profile(models.Model):
 
     gender_type = (
         ('M', 'Male'),
@@ -78,12 +99,12 @@ class Idcard(models.Model):
     driving_license = models.CharField(max_length=1, choices=yes_or_no, help_text='add if thier driving license or not')
 
     def __str__(self):
-        return self.name """
+        return self.name
 
-""" class services(models.Model):
-    service_name = models.CharField
-class birthregisteration(models.Model):
+
+
+""" class birthregisteration(models.Model):
 class premiumservice(models.Model):
 class nationalidregesteration(models.Model):
 class drivinglicenseregisteration(models.Model):
-class payment(models.Model): """ 
+class payment(models.Model):  """
