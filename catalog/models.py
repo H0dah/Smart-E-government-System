@@ -47,10 +47,35 @@ class Idcard(models.Model):
     aprtment = models.IntegerField(default=1) #الشقة
     phone_number = models.IntegerField(default=10022334455, help_text='Enter Phone Number')
     residential_pool = models.CharField(max_length=30, default='45')
-    #photograph = models.ImageField(upload_to='media')
+    photograph = models.ImageField(upload_to='media', default='/graduationproject/media/default.jpg')
 
     def __str__(self):
         return self.first_name
+
+class Birth_certificate(models.Model):
+
+    religion_options = (
+        ('muslim', 'مسلم'),
+        ('Christian', 'مسيحي'),
+        ('Godless', 'بلا ديانة'),
+    )
+
+    name = models.CharField(max_length=30)
+    nationality = models.CharField(max_length=30, default='Egyptian')
+    religion = models.CharField(max_length=30, choices=religion_options)
+    birth_place = models.CharField(max_length=40, default='Egypt')
+    date_of_birth = models.DateField(help_text='Enter Date of Birth')
+    #father data
+    father_quadruple_name = models.CharField(max_length=100)
+    father_nationality = models.CharField(max_length=30, default='Egyptian')
+    father_religion = models.CharField(max_length=30, choices=religion_options)
+    #mother data
+    mother_quadruple_name = models.CharField(max_length=100)
+    mother_nationality = models.CharField(max_length=30, default='Egyptian')
+    mother_religion = models.CharField(max_length=30, choices=religion_options)
+
+    def __str__(self):
+        return self.name
 
 class Driving_license(models.Model):
 
@@ -65,8 +90,7 @@ class Driving_license(models.Model):
         return self.national_id
 
 
-
-class Profile(models.Model):
+""" class Profile(models.Model):
 
     gender_type = (
         ('M', 'Male'),
@@ -101,10 +125,4 @@ class Profile(models.Model):
     def __str__(self):
         return self.name
 
-
-
-""" class birthregisteration(models.Model):
-class premiumservice(models.Model):
-class nationalidregesteration(models.Model):
-class drivinglicenseregisteration(models.Model):
-class payment(models.Model):  """
+ """
