@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--    bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--    fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Changa&family=Chilanka&family=Dancing+Script&family=Hepta+Slab&family=Indie+Flower&family=Lexend+Zetta&family=Lobster&family=Modak&family=Open+Sans+Condensed&family=Pacifico&family=Permanent+Marker&family=Satisfy&family=Shadows+Into+Light&family=Tajawal&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Links/animation.css">
+    <!--    ============================-->
+    <link rel="stylesheet" href="css/home.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/slider.css" />
+    <script src="https://kit.fontawesome.com/9c64bb266a.js" crossorigin="anonymous"></script>
+    <script>
+        document.documentElement.className = "js";
+        var supportsCssVars = function() {
+            var e, t = document.createElement("style");
+            return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
+        };
+
+    </script>
+</head>
+
+<body>
+    <!--Nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark row">
+        <a class="navbar-brand col-3" href="index.html" style=""> إنجزني </a>
+        <div class="col-1"></div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="margin-right: 20px;">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse col-lg-8" id="navbarNav">
+            <ul class="navbar-nav container-fluid">
+                <li class="nav-item col-lg-3">
+                    <a class="nav-link active" href="#">الصفحه الرئيسية <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item col-lg-3">
+                    <a class="nav-link" href="#">الطلبات</a>
+                </li>
+                <li class="nav-item col-lg-3 ">
+                    <a class="nav-link" href="login.html">اعدادات الحساب</a>
+                </li>
+                <li class="nav-item dropdown col-lg-3">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        المزيد
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="">
+                        <a class="dropdown-item night" href="#">عن النظام</a>
+                        <a class="dropdown-item light" href="#">مساعدة</a>
+                        <a class="dropdown-item dark" href="../splash/login.html">تسجيل الخروج</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div>
+        <!-- Pieces Slider -->
+        <div class="pieces-slider" style="">
+            <!-- Each slide with corresponding image and text -->
+            <div class="pieces-slider__slide">
+                <img class="pieces-slider__image" src="../images/header.png" alt="" style="height: 270px;">
+                <h2 class="pieces-slider__text">هنخلي حياتك اسهل</h2>
+            </div>
+            <div class="pieces-slider__slide">
+                <img class="pieces-slider__image" src="img/1.jpg" alt="">
+                <h2 class="pieces-slider__text" style="background-color: aliceblue">بنبعدك عن التعاملات الورقية</h2>
+            </div>
+            <div class="pieces-slider__slide">
+                <img class="pieces-slider__image" src="img/2.jpg" alt="">
+                <h2 class="pieces-slider__text">بنوفر وقتك و نبعدك عن الزحمة</h2>
+            </div>
+            <div class="pieces-slider__slide">
+                <img class="pieces-slider__image" src="img/3.jpg" alt="" style="height: 270px;">
+                <h2 class="pieces-slider__text">بنوفر عليك الروتين</h2>
+            </div>
+            <!-- Canvas to draw the pieces -->
+            <canvas class="pieces-slider__canvas"></canvas>
+            <!-- Slider buttons: prev and next -->
+            <button class="pieces-slider__button pieces-slider__button--prev">السابق</button>
+            <button class="pieces-slider__button pieces-slider__button--next">التالي</button>
+        </div>
+    </div>
+
+    <div class="services">
+        <h1>الخدمات</h1>
+        <div class="card">
+            <h5 class="card-header" style="">البطاقة الشخصية</h5>
+            <div class="card-body" style="">
+                <p class="card-text">بطاقة الرقم القومي (أو رسمياً بطاقة تحقيق الشخصية) هي وثيقة رسمية لإثبات هوية الشخص سواء في المصالح الحكومية أو المؤسسات الخاصة </p>
+                <br><br>
+                <p class="hidden1" style="display: none;">
+                    المستندات المطلوبة لاستخراج البطاقه الشخصية <br><br>
+                    <br>استمارة بطاقة الرقم القومى
+                    <br> المستندات الدالة على اثبات الشخصية ومحل الاقامة والوظيفة والحالة الاجتماعية وبحضور درجة قرابة حتى الدرجة الرابعة
+                    <br> شراء استمارة الرقم القومى وملىء بياناتها واعتمادها من الجهه التابع لها
+
+                </p>
+                <button class="btn btn-primary show1">اظهر المزيد</button>
+                <a href="../Forms/id.html" class="btn btn-primary">استخراج البطاقه</a>
+
+            </div>
+        </div>
+        <div class="card">
+            <h5 class="card-header">شهادة الميلاد</h5>
+            <div class="card-body">
+                <p class="card-text">شهادة الميلاد، وهي شهادة يتم إصدارها من قبل الدولة للفرد ويوجد فيها معلومات عن تاريخ وساعة الميلاد واسم المولود ولقبه واسم الأم والأب وجنس المولود ومكان الميلاد</p>
+                <br><br>
+                <p class="hidden2" style="display: none;">
+                    المستندات المطلوبة لاستخراج شهادة الميلاد <br><br>
+                    <br> نموذج (40) طلب الحصول على صورة وثيقة أو مستند.
+
+                    <br> أصل قسيمة الزواج وصورتين ضوئتين منها.
+
+                    <br> صورتين ضؤيتن لبطاقة الرقم القومى للزوج والزوجة.
+
+                    <br> ويحق استخراج شهادة الميلاد المميكنة، للطلب المقدم من، الأب، الأم ، الأخ، العم، الزوجة، الأبناء، الجد، الخال".
+                </p>
+                <button href="#" class="btn btn-primary show2">اظهر المزيد</button>
+                <a href="../Forms/Birth.html" class="btn btn-primary">استخراج شهادة ميلاد جديدة</a>
+            </div>
+        </div>
+        <div class="card">
+            <h5 class="card-header">رخصة القيادة</h5>
+            <div class="card-body">
+                <p class="card-text">رخصة أو إجازة أو تصريح السياقة أو القيادة هي عبارة عن وثيقة رسمية تسمح لحاملها بقيادة سيارة أو دراجة نارية. في بعض الدول، يتم إصدار الإجازة بعد نجاح المستلم بامتحان قيادة، وفي دول أخرى يحصل الشخص عليها قبل البدأ بتعلم القيادة. هناك العديد من الأقسام للإجازات تحدد الحامل بنوع السيارة التي يمكن قيادتها</p>
+                <br><br>
+                <p class="hidden3" style="display: none;">
+                    المستندات المطلوبة لاستخراج رخصة القيادة <br><br><br>
+                    <br> يتم إستخراج الرخص من مرور محل اقامة طالب الترخيص .
+                    <br> ألا يقل السن عن 18 عام مع تقديم ما يثبت شخصيته ومحل إقامة طالب الترخيص ( بطاقة الرقم القومي).
+                    <br> تقديم أربع صور شمسية حديثة .
+                    <br> تقديم ما يفيد الحصول على شهادة إتمام مرحلة دراسية أو شهادة محو الأمية الصادرة من الهيئة العامة لمحو الأمية وتعليم الكبار .
+                    <br> إثبات اللياقة الطبية بموجب شهادتين طبيتين (باطني – عيون) مع تحديد فصيلة الدم .
+                    <br> إجتياز الإختبار النظري والعملي في القيادة وفي قواعد وآداب المرور ..
+                </p>
+                <button class="btn btn-primary show3">اظهر المزيد</button>
+                <a href="../Forms/lisence.html" class="btn btn-primary">استخراج رخصة قيادة</a>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="page-footer font-small cyan darken-3">
+
+        <!-- Footer Elements -->
+        <div class="container">
+
+            <!-- Grid row-->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-12 py-5" style="text-align: center;">
+                    <div class="mb-5 flex-center">
+
+                        <!-- Facebook -->
+                        <a class="fb-ic">
+                            <i class="fa fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <!-- Twitter -->
+                        <a class="tw-ic">
+                            <i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <!--Instagram-->
+                        <a class="ins-ic">
+                            <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row-->
+
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="https://www.facebook.com/profile.php?id=100006305745202" target="_blank">Powered by Mohamed</a>
+        </div>
+
+    </footer>
+    <!-- Footer -->
+
+    <script src='js/anime.min.js'></script>
+    <script src='js/pieces.min.js'></script>
+    <script src='js/demo.js'></script>
+</body>
+<script>
+    $(document).ready(function() {
+        $(".show1").click(function() {
+            $(".hidden1").slideToggle();
+            var val = $(".show1").html();
+            if (val == "اظهر المزيد") {
+                $(".show1").html("اظهر اقل")
+            } else {
+                $(".show1").html("اظهر المزيد")
+            }
+        })
+        $(".show2").click(function() {
+            $(".hidden2").slideToggle();
+            var val = $(".show2").html();
+            if (val == "اظهر المزيد") {
+                $(".show2").html("اظهر اقل")
+            } else {
+                $(".show2").html("اظهر المزيد")
+            }
+        })
+        $(".show3").click(function() {
+            $(".hidden3").slideToggle();
+            var val = $(".show3").html();
+            if (val == "اظهر المزيد") {
+                $(".show3").html("اظهر اقل")
+            } else {
+                $(".show3").html("اظهر المزيد")
+            }
+        })
+    })
+
+</script>
+
+</html>
