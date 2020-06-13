@@ -1,0 +1,73 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+nav {
+    background-color: #154889;
+}
+
+* {
+    font-family: changa;
+    color: aliceblue;
+    text-align: justify-all;
+}
+
+ul {
+    direction: rtl;
+    text-align: start;
+}
+
+#navbarNav {
+    padding: 0px;
+}
+
+.nav-item {
+    padding: 0px;
+}
+
+.nav-item .dropdown-menu {
+    margin-left: 120px;
+    text-align: right;
+}
+
+.services {
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 30px;
+}
+
+.services h1 {
+    text-align: center;
+    color: aliceblue;
+    font-size: 60px;
+    font-weight: 800;
+    margin: 0px;
+    padding: 0px;
+}
+
+.card {
+    width: 70%;
+    margin-top: 80px;
+    margin-left: 15%;
+/*    background: linear-gradient(115deg, #0d4270 10%,beige 100%);*/
+    background-color: #154889;
+    box-shadow: gray 20px 30px 60px;
+    border-radius: 20px;
+    padding: 0px;
+    
+}
+.card-header{
+    text-align: center;
+}
+.card-body{
+    text-align: end;
+}
+.card-text{
+    margin-bottom: 20px;
+}

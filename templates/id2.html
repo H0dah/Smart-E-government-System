@@ -1,0 +1,144 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>انجزني</title>
+    <!--    bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--    fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Changa&family=Chilanka&family=Dancing+Script&family=Hepta+Slab&family=Indie+Flower&family=Lexend+Zetta&family=Lobster&family=Modak&family=Open+Sans+Condensed&family=Pacifico&family=Permanent+Marker&family=Satisfy&family=Shadows+Into+Light&family=Tajawal&display=swap" rel="stylesheet">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static '../static/css/forms.css' %}">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!--===============================================================================================-->
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .row{
+            margin-bottom: 30px;
+        }
+        .login100-form-title{
+                        margin-bottom: 30px;
+
+        }
+        .container-login100-form-btn{
+            margin-top:60px;
+        }
+
+    </style>
+</head>
+
+<body style="background-color:#16498a; ">
+
+    <div class="limiter row" style="">
+
+        <!--logo-->
+        <div class="col-lg-1 col-12 col-md-3"></div>
+
+        <div class="col-lg-5 col-12 col-md-6 row" style="justify-content:center">
+            <img class="col-lg-12 col-md-12 col-5" src="{% static '../static/images/Logo.svg' %}" style="display: inline-block">
+        </div>
+
+        <div class="col-lg-1 col-12 col-md-3"></div>
+
+        <!--form-->
+        <div class="container-login100 col-lg-5 col-12" style="background-color:#16498a;display: inline-block;direction: rtl;">
+
+            <div class="wrap-login100 p-t-20 p-b-20" style="background-color:#16498a;">
+
+                <form class="login100-form validate-form col-12 row" style="justify-content: center;">
+                    <span class="login100-form-title col-12" style="text-align: center;font-size: 30px;margin-bottom: 30px;margin-top: 20px;">طلب بطاقة شخصية جديدة</span>
+                    <span class="login100-form-title col-12" style="text-align: center;font-size: 20px;">ثانياً : بيانات محل الاقامة </span>
+                    <div class="m-b-20 row container-fluid col-12" style="justify-content: flex-start;direction: rtl;">
+                        <div class="wrap-input100 validate-input m-t-15 m-b-15 col-3" data-validate="Enter username">
+                            <input class="input100" type="number" name="username" aria-describedby="addon-wrapping">
+                            <span class="focus-input100" data-placeholder="عقار رقم"></span>
+                        </div>
+                        <div class="col-1"></div>
+
+                        <div class="wrap-input100 validate-input m-t-15 m-b-15 col-3 col-md-3" data-validate="Enter username">
+                            <input class="input100" type="text" name="username" aria-describedby="addon-wrapping">
+                            <span class="focus-input100" data-placeholder="شارع"></span>
+                        </div>
+                        <div class="col-1"></div>
+
+                        <div class="wrap-input100 validate-input m-t-20 m-b-15 col-4 col-md-4" data-validate="Enter username">
+                            <input class="input100" type="text" name="username" aria-describedby="addon-wrapping">
+                            <span class="focus-input100" data-placeholder="الدور"></span>
+                        </div>
+                    </div>
+                    <div class="m-b-20 row container-fluid col-12" style="justify-content: flex-start;direction: rtl;">
+                        <div class="wrap-input100 validate-input m-t-20 m-b-25 col-3" data-validate="Enter username">
+                            <input class="input100" type="text" name="username" aria-describedby="addon-wrapping">
+                            <span class="focus-input100" data-placeholder="شقة"></span>
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="wrap-input100 validate-input m-b-20 col-3 col-md-3" data-validate="Enter username">
+                            <input class="input100" type="text" name="username" aria-describedby="addon-wrapping">
+                            <span class="focus-input100" data-placeholder="تليفون"></span>
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="wrap-input100 validate-input m-b-20 col-4 col-md-4" data-validate="Enter username">
+                            <input class="input100" type="text" name="username" aria-describedby="addon-wrapping">
+                            <span class="focus-input100" data-placeholder="تجمع سكني"></span>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                    <div class="m-b-20 row container col-12" style="justify-content: flex-start;direction: rtl;">
+                        <div class="wrap-input100 validate-input m-t-5 m-b-15 col-3 col-md-3" data-validate="Enter username">
+                            <input class="input100" type="text" name="username" aria-describedby="addon-wrapping">
+                            <span class="focus-input100" data-placeholder="محافظة"></span>
+                        </div>
+                        <div class="col-1"></div>
+
+                        <div class="wrap-input100 validate-input m-t-5 m-b-15 col-3 col-md-3" data-validate="Enter username">
+                            <input class="input100" type="text" name="username" aria-describedby="addon-wrapping">
+                            <span class="focus-input100" data-placeholder="قسم \ مركز"></span>
+                        </div>
+                        <div class="col-1"></div>
+
+                        <div class="wrap-input100 validate-input m-t-5 m-b-15 col-4 col-md-4" data-validate="Enter username">
+                            <input class="input100" type="text" name="username" aria-describedby="addon-wrapping">
+                            <span class="focus-input100" data-placeholder="شياخة \ قرية"></span>
+                        </div>
+                    </div>
+                        <div class=" m-t-15 m-b-15 col-12" data-validate="Personal image" style="text-align: center">
+                            <span style="color: aliceblue ; font-size: 30px; text-align: center;"> صورة شخصية 4X6</span>
+                            <input type="file" class="form-control-file border">
+                        </div>
+                    <div class="container-login100-form-btn m-t-20">
+                        <a class="btn btn-light col-12" href="id.html">
+                            <span>السابق</span>
+                        </a>
+                    </div>
+                    <div class="col-1"></div>
+
+                    <div class="container-login100-form-btn m-t-20" id="done">
+                        <a class="btn btn-success col-12">
+                            <span>تم </span>
+                        </a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="{% static '../static/js/forms.js' %}"></script>
+    <script>
+        $(document).ready(function() {
+            $("#done").click(function() {
+                swal("تم تقديم الطلب بنجاح");
+            })
+        })
+
+    </script>
+</body>
+
+</html>

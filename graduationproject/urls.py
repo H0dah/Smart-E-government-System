@@ -16,12 +16,25 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls import include
-from django.views.generic import RedirectView
+from catalog import views
+""" (1) from django.views.generic import RedirectView
 from django.conf import settings
-from django.conf.urls.static import static
+from django.conf.urls.static import static """
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('catalog/', include('catalog.urls')),
-    path('', RedirectView.as_view(url='catalog/')),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    path('', views.splash, name='splash'),
+    path('login.html', views.login, name='login'),
+    path('lisence2.html', views.lisence2, name='lisence2'),
+    path('lisence.html', views.lisence, name='lisence'),
+    path('index.html', views.index, name='index'),
+    path('id2.html', views.id2, name='id2'),
+    path('id.html', views.id, name='id'),
+    path('Birth.html', views.Birth, name='birth'),
+    path('Birth2.html', views.Birth2, name='Birth2'),
+    path('Birth3.html', views.Birth3, name='Birth3'),
+]
+""" (1)  path('', RedirectView.as_view(url='catalog/')),
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) """

@@ -1,0 +1,103 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>انجزني</title>
+    <!--    bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--    fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Changa&family=Chilanka&family=Dancing+Script&family=Hepta+Slab&family=Indie+Flower&family=Lexend+Zetta&family=Lobster&family=Modak&family=Open+Sans+Condensed&family=Pacifico&family=Permanent+Marker&family=Satisfy&family=Shadows+Into+Light&family=Tajawal&display=swap" rel="stylesheet">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static '../static/css/util2.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '../static/css/splash.css' %}">
+    <!--===============================================================================================-->
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+    </style>
+</head>
+
+<body style="background-color:#16498a; ">
+
+    <div class="limiter row" style="">
+
+        <!--logo-->
+        <div class="col-lg-1 col-12 col-md-1"></div>
+
+        <div class="col-lg-5 col-12 col-md-5 row" style="justify-content:center">
+            <img class="col-lg-12 col-md-12 col-5" src="{% static '../static/images/Logo.svg' %}" style="display: inline-block">
+        </div>
+
+        <div class="col-lg-1 col-12 col-md-1"></div>
+
+        <!--form-->
+        <div class="container-login100 col-lg-5 col-12 col-md-5" style="background-color:#16498a;display: inline-block;">
+
+            <div class="wrap-login100 p-t-20 p-b-20" style="background-color:#16498a;">
+
+                <form class="login100-form validate-form col-12">
+                    <span class="login100-form-title" style="text-align: center;font-size: 30px">تسجيل الدخول</span>
+                    <div class="wrap-input100 validate-input m-t-30 m-b-35" data-validate="Enter username">
+                        <input class="input100" type="number" name="username" aria-describedby="addon-wrapping">
+                        <span class="focus-input100" data-placeholder="الرقم القومي"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-30" data-validate="Enter password">
+                        <input class="input100" type="password" name="pass">
+                        <span class="focus-input100" data-placeholder="كلمة المرور"></span>
+                    </div>
+
+                    <div class="row check">
+
+                        <div class="col-sm-12 col-lg-4 col-md-12 col-12" style="margin-left: 30%;margin-top:10px;">
+                            <a href="">نسيت كلمة المرور</a>
+                        </div>
+
+                        <div class="col-sm-12 col-lg-4 col-md-12 col-12" style="margin-top:10px;margin-left: 30%;">
+                            <input type="checkbox" id="checkbox">
+                            <label for="checkbox" style="text-align: center;justify-content: center;">تذكر كلمة المرور</label>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="container-login100-form-btn m-t-20">
+                        <a class="btn btn-light col-12" href="index.html" style="font-size: 25px;">
+                            <span>تسجيل الدخول</span>
+                        </a>
+                    </div>
+                    <div class="note">
+                        <p> للتسجيل لأول مرة علي النظام يجب ادخال <br>
+                            اسم المستخدم : الرقم القومي كاملاُ مكون من 14 رقم <br>
+                            كلمة المرور : الرقم القومي كاملاُ مكون من 14 رقم <br>
+                            ثم الضغط علي تسجيل الدخول </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="{% static '../static/js/splash.js' %}"></script>
+    <script>
+        $(document).ready(function() {
+            $("#radio1").click(function() {
+                $(".hide").show();
+            })
+            $("#radio2").click(function() {
+                $(".hide").hide();
+            })
+
+        })
+
+    </script>
+
+</body>
+
+</html>

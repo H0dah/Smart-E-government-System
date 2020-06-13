@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% load static %}<!DOCTYPE html>
 <html>
 
 <head>
@@ -10,11 +10,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!--    fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Changa&family=Chilanka&family=Dancing+Script&family=Hepta+Slab&family=Indie+Flower&family=Lexend+Zetta&family=Lobster&family=Modak&family=Open+Sans+Condensed&family=Pacifico&family=Permanent+Marker&family=Satisfy&family=Shadows+Into+Light&family=Tajawal&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../Links/animation.css">
+    <link rel="stylesheet" href="{% static '../static/Links/animation.css' %}">
     <!--    ============================-->
-    <link rel="stylesheet" href="css/home.css" type="text/css">
-    <link rel="stylesheet" type="text/css" href="css/base.css" />
-    <link rel="stylesheet" type="text/css" href="css/slider.css" />
+    <link rel="stylesheet" href="{% static '../static/css/home.css' %}" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static '../static/css/base.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '../static/css/slider.css' %}" />
     <script src="https://kit.fontawesome.com/9c64bb266a.js" crossorigin="anonymous"></script>
     <script>
         document.documentElement.className = "js";
@@ -43,7 +43,7 @@
                     <a class="nav-link" href="#">الطلبات</a>
                 </li>
                 <li class="nav-item col-lg-3 ">
-                    <a class="nav-link" href="login.html">اعدادات الحساب</a>
+                    <a class="nav-link" href="#">اعدادات الحساب</a>
                 </li>
                 <li class="nav-item dropdown col-lg-3">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -52,7 +52,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="">
                         <a class="dropdown-item night" href="#">عن النظام</a>
                         <a class="dropdown-item light" href="#">مساعدة</a>
-                        <a class="dropdown-item dark" href="../splash/login.html">تسجيل الخروج</a>
+                        <a class="dropdown-item dark" href="login.html">تسجيل الخروج</a>
                     </div>
                 </li>
             </ul>
@@ -64,19 +64,19 @@
         <div class="pieces-slider" style="">
             <!-- Each slide with corresponding image and text -->
             <div class="pieces-slider__slide">
-                <img class="pieces-slider__image" src="../images/header.png" alt="" style="height: 270px;">
+                <img class="pieces-slider__image" src="{% static '../static/images/header.png' %}" alt="" style="height: 270px;">
                 <h2 class="pieces-slider__text">هنخلي حياتك اسهل</h2>
             </div>
             <div class="pieces-slider__slide">
-                <img class="pieces-slider__image" src="img/1.jpg" alt="">
+                <img class="pieces-slider__image" src="{% static '../static/img/1.jpg' %}" alt="">
                 <h2 class="pieces-slider__text" style="background-color: aliceblue">بنبعدك عن التعاملات الورقية</h2>
             </div>
             <div class="pieces-slider__slide">
-                <img class="pieces-slider__image" src="img/2.jpg" alt="">
+                <img class="pieces-slider__image" src="{% static '../static/img/2.jpg' %}" alt="">
                 <h2 class="pieces-slider__text">بنوفر وقتك و نبعدك عن الزحمة</h2>
             </div>
             <div class="pieces-slider__slide">
-                <img class="pieces-slider__image" src="img/3.jpg" alt="" style="height: 270px;">
+                <img class="pieces-slider__image" src="{% static '../static/img/3.jpg' %}" alt="" style="height: 270px;">
                 <h2 class="pieces-slider__text">بنوفر عليك الروتين</h2>
             </div>
             <!-- Canvas to draw the pieces -->
@@ -102,7 +102,7 @@
 
                 </p>
                 <button class="btn btn-primary show1">اظهر المزيد</button>
-                <a href="../Forms/id.html" class="btn btn-primary">استخراج البطاقه</a>
+                <a href="id.html" class="btn btn-primary">استخراج البطاقه</a>
 
             </div>
         </div>
@@ -122,7 +122,7 @@
                     <br> ويحق استخراج شهادة الميلاد المميكنة، للطلب المقدم من، الأب، الأم ، الأخ، العم، الزوجة، الأبناء، الجد، الخال".
                 </p>
                 <button href="#" class="btn btn-primary show2">اظهر المزيد</button>
-                <a href="../Forms/Birth.html" class="btn btn-primary">استخراج شهادة ميلاد جديدة</a>
+                <a href="Birth.html" class="btn btn-primary">استخراج شهادة ميلاد جديدة</a>
             </div>
         </div>
         <div class="card">
@@ -140,7 +140,7 @@
                     <br> إجتياز الإختبار النظري والعملي في القيادة وفي قواعد وآداب المرور ..
                 </p>
                 <button class="btn btn-primary show3">اظهر المزيد</button>
-                <a href="../Forms/lisence.html" class="btn btn-primary">استخراج رخصة قيادة</a>
+                <a href="lisence.html" class="btn btn-primary">استخراج رخصة قيادة</a>
             </div>
         </div>
     </div>
@@ -178,17 +178,14 @@
 
         </div>
 
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2020 Copyright:
-            <a href="https://www.facebook.com/profile.php?id=100006305745202" target="_blank">Powered by Mohamed</a>
-        </div>
+
 
     </footer>
     <!-- Footer -->
 
-    <script src='js/anime.min.js'></script>
-    <script src='js/pieces.min.js'></script>
-    <script src='js/demo.js'></script>
+    <script src='{% static '../static/js/anime.min.js' %}'></script>
+    <script src='{% static '../static/js/pieces.min.js' %}'></script>
+    <script src='{% static '../static/js/demo.js' %}'></script>
 </body>
 <script>
     $(document).ready(function() {
